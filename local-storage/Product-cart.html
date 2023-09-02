@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Add Your Product To Buy</h1>
+    <input type="text" placeholder="Product Item" id="product">
+    <input type="text" placeholder="Product Quantity" id="quantity">
+    <button onclick="addYourProduct()">Add Cart</button>
+</body>
+<script>
+    const addYourProduct=()=>{
+        console.log("cliked");
+        //add product
+        const getValue=document.getElementById('product');
+        const value=getValue.value;
+        getValue.value="";
+        const getQuantiyValue=document.getElementById('quantity');
+        const Qvalue=getQuantiyValue.value;
+        getQuantiyValue.value="";
+
+        console.log(value,Qvalue);
+    }
+</script>
+<script src="script.js"></script>
+</html>
