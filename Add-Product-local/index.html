@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and Session Storage</title>
+</head>
+<body>
+
+<h1>Local And Session Storage</h1>
+<input type="text" placeholder="id" id="id-field">
+<input type="text" placeholder="value" id="value-field">
+<button onclick="addTolocalStorage()">Add</button>
+
+<script>
+    const addTolocalStorage=()=>{
+        const idInput=document.getElementById('id-field')
+        const id=idInput.value;//set in local storage ID
+        const valueInput=document.getElementById('value-field');
+        const value=valueInput.value;//Set in local storage Value
+
+        //
+        if(id && value){
+            localStorage.setItem(id,value);
+        }
+        
+        idInput.value="";
+        valueInput.value="";
+
+    }
+</script>
+    
+</body>
+</html>
